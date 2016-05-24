@@ -1,1 +1,1 @@
-# Splunk TA for Aruba Networks
+# Aruba Networks TA for Splunk
