@@ -1,0 +1,5 @@
+vendor_severity,severity
+DBUG,informational
+INFO,informational
+NOTI,low
+WARN,high
