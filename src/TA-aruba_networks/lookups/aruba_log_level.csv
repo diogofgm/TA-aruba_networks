@@ -1,0 +1,6 @@
+vendor_log_level,log_level
+DBUG,debug
+INFO,info
+NOTI,info
+WARN,warn
+ERRS,error
