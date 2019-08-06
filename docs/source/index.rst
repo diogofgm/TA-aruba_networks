@@ -9,6 +9,12 @@ Welcome to TA-aruba_networks's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   
+   requirements
+   installation
+   troubleshooting
+   support
+
 
 
 
