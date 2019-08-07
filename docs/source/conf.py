@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'TA-aruba_networks'
+project = u'Aruba Networks Add-on for Splunk'
 copyright = u'2019, Diogo Silva'
 author = u'Diogo Silva'
 
@@ -139,7 +139,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'ta-aruba_networks', u'TA-aruba_networks Documentation',
+    (master_doc, 'Aruba Networks Add-on for Splunk', u'Aruba Networks Add-on for Splunk Documentation',
      [author], 1)
 ]
 
@@ -150,7 +150,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'TA-aruba_networks', u'TA-aruba_networks Documentation',
+    (master_doc, 'TA-aruba_networks', u'Aruba Networks Add-on for Splunk Documentation',
      author, 'TA-aruba_networks', 'One line description of project.',
      'Miscellaneous'),
 ]
