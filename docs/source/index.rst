@@ -7,7 +7,7 @@ Aruba Networks Add-on for Splunk
 ================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    releasenotes
