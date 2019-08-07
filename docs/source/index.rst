@@ -10,6 +10,7 @@ Aruba Networks Add-on for Splunk
    :maxdepth: 2
    :caption: Contents:
 
+   releasenotes
    requirements
    installation
    troubleshooting
