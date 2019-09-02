@@ -24,9 +24,9 @@ copyright = u'2019, Diogo Silva'
 author = u'Diogo Silva'
 
 # The short X.Y version
-version = u''
+version = u'0.1'
 # The full version, including alpha/beta/rc tags
-release = u'2019'
+release = u'0.1.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -102,7 +102,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'TA-aruba_networksdoc'
+htmlhelp_basename = 'ArubaNetworksAdd-onforSplunkdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -129,7 +129,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'TA-aruba_networks.tex', u'TA-aruba\\_networks Documentation',
+    (master_doc, 'ArubaNetworksAdd-onforSplunk.tex', u'Aruba Networks Add-on for Splunk Documentation',
      u'Diogo Silva', 'manual'),
 ]
 
@@ -150,8 +150,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'TA-aruba_networks', u'Aruba Networks Add-on for Splunk Documentation',
-     author, 'TA-aruba_networks', 'One line description of project.',
+    (master_doc, 'ArubaNetworksAdd-onforSplunk', u'Aruba Networks Add-on for Splunk Documentation',
+     author, 'ArubaNetworksAdd-onforSplunk', 'One line description of project.',
      'Miscellaneous'),
 ]
 
