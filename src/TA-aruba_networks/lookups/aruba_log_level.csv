@@ -4,3 +4,4 @@
 "NOTI","info"
 "WARN","warn"
 "ERRS","error"
+"CRIT","crit"
