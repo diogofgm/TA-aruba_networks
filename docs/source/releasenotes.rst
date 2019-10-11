@@ -4,8 +4,7 @@ Release Notes
 
 v0.1.1 - October 2019
 ---------------------
-- Added missing user extraction for aruba:authmgr
-- Added missing action extraction for aruba:authmgr
+- Added missing extractions for CIM compliance
 - Updated aruba_actions.csv 
 
 
