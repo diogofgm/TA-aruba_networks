@@ -1,5 +1,7 @@
 "vendor_action","action"
 "Succeeded"," success"
 "Successfully","success"
+"Successful","success"
 "failed"," failure"
+"Failed"," failure"
 "deny","blocked"
