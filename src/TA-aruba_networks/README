@@ -1,7 +1,7 @@
-# QNAP Technical Add-on for Splunk
+# Aruba Networks Add-on for Splunk
 
 ## System requirements
-- Aruba Networks Wi Fi Controller
+- Aruba Networks Wi-Fi Controller
 - Splunk 7.0 or newer
 
 ## Installation
