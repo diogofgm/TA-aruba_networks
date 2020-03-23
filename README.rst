@@ -1,5 +1,5 @@
 Aruba Networks Add-on for Splunk
-===========================
+================================
 |appinspect-status| |docs|
 
 
