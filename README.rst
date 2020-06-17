@@ -8,7 +8,7 @@ Documentation
 Documentation can be found at:
 https://ta-aruba-networks.readthedocs.io/en/latest/
 
-.. |appinspect-status| image:: https://img.shields.io/badge/AppIspect-passed-success.svg 
+.. |appinspect-status| image:: https://img.shields.io/badge/AppInspect-passed-success.svg 
     :alt: build status
     :scale: 100%
     :target: https://splunkbase.splunk.com/app/4668/
