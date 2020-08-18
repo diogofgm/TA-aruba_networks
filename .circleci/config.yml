@@ -36,6 +36,8 @@ jobs:
               PACKAGE_ID=$(crudini --get package/default/app.conf id name)
               echo Version = $VERSION
               echo Package = $PACKAGE_ID
+              pwd
+              ls
 
         - run:
             name: Package app
@@ -89,3 +91,5 @@ workflows:
           filters:
             branches:
               only: /.*/
+            requires:
+              - splunk-app-package
