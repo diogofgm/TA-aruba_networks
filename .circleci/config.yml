@@ -93,8 +93,9 @@ jobs:
             source /tmp/workspace/build/VERSION
             go get -v -u github.com/tcnksm/ghr            
             $HOME/go/bin/ghr -t ${GH_PAT} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} ${ISPRE} -delete ${VERSION} $PACKAGE
-            
+
 workflows:
+  version: 2
   build:
     jobs:
       - splunk-app-package/package:
