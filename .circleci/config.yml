@@ -35,7 +35,7 @@ jobs:
               VERSION=$(crudini --get package/default/app.conf id version)
               PACKAGE_ID=$(crudini --get package/default/app.conf id name)
               echo Version = $VERSION
-              echo Package = $PACKAGE
+              echo Package = $PACKAGE_ID
 
         - run:
             name: Package app
