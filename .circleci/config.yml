@@ -74,3 +74,15 @@ jobs:
             PACKAGE=$(ls /tmp/workspace/build/package/splunkbase/*)
             splunk-appinspect inspect --mode precert --included-tags cloud --data-format junitxml --output-file test-results/appinspect-mode-cloud.xml $PACKAGE
             if grep failures=\"[1-9] test-results/appinspect-mode-cloud.xml; then exit 1; else exit 0; fi
+
+workflows:
+  build:
+    jobs:
+      - splunk-app-package:
+          filters:
+            branches:
+              only: /.*/
+      - splunk-app-inspect:
+          filters:
+            branches:
+              only: /.*/
