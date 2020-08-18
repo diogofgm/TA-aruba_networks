@@ -75,12 +75,10 @@ orbs:
                 if grep failures=\"[1-9] test-results/appinspect-mode-<<parameters.label>>.xml; then exit 1; else exit 0; fi
 
 jobs:
-  publish-gh:
+  publish-github:
     docker:
       - image: circleci/python:3.7
     steps:
-      - setup_remote_docker:
-          docker_layer_caching: true
       - attach_workspace:
           at: /tmp/workspace
       - checkout
