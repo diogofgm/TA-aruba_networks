@@ -91,5 +91,5 @@ workflows:
           filters:
             branches:
               only: /.*/
-            requires:
-              - splunk-app-package
+          requires:
+            - splunk-app-package
