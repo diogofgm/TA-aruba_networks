@@ -34,6 +34,9 @@ jobs:
               mkdir -p build
               VERSION=$(crudini --get package/default/app.conf id version)
               PACKAGE_ID=$(crudini --get package/default/app.conf id name)
+              echo Version = $VERSION
+              echo Package = $PACKAGE
+
         - run:
             name: Package app
             command: |
