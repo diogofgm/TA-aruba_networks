@@ -119,3 +119,12 @@ workflows:
               only: /.*/
           requires:
             - package
+  publish:
+    jobs:
+      - splunk-app-package/package:
+          name: package
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v\d*\.\d*\.\d*.*$/
