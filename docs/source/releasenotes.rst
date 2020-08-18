@@ -2,6 +2,11 @@
 Release Notes
 =============
 
+v0.1.2 - July 2020
+---------------------
+- 
+
+
 v0.1.1 - October 2019
 ---------------------
 - Added missing extractions for CIM compliance
