@@ -459,11 +459,16 @@ workflows:
             - approval-tag-final-patch
   publish:
     jobs:
+      - publish-approval:
+          type: approval
       - splunk-app-package/package:
           name: package
+          requires:
+            - publish-approval
           filters:
             branches:
-              only: master
+              only: 
+                - master
             tags:
               only: /^v\d*\.\d*\.\d*.*$/
       - publish-gh:
@@ -471,7 +476,8 @@ workflows:
             - package
           filters:
             branches:
-              only: master
+              only: 
+                - master
             tags:
               only: /^v\d*\.\d*\.\d*.*$/
       - publish-sbase:
@@ -479,6 +485,7 @@ workflows:
             - package
           filters:
             branches:
-              only: master
+              only: 
+                - master
             tags:
               only: /^v\d*\.\d*\.\d*.*$/
