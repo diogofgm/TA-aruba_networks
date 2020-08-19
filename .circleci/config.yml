@@ -34,8 +34,6 @@ orbs:
                 VERSION_DOCKER_MMP=$(echo  $VERSION | sed -n 's/v\([0-9]*\.[0-9]*\.[0-9]*\).*/\1/p')
                 [ "$(./semtag getfinal)" != "${CIRCLE_TAG}" ] && ISPRE="-prerelease" || ISPRE=""
                 PACKAGE_ID=$(crudini --get package/default/app.conf id name)
-
-
                 echo export VERSION=${VERSION} >build/VERSION
                 echo export VERSION_SPLUNK=${VERSION_SPLUNK} >>build/VERSION
                 echo export VERSION_PACKAGE=${VERSION_PACKAGE} >>build/VERSION
@@ -49,7 +47,7 @@ orbs:
               name: version and package
               command: |
                 source build/VERSION
-                source ~/.venv/bin/activate                
+                source ~/.venv/bin/activate
                 BUILD_DIR=build/source/$PACKAGE_ID
                 mkdir -p $BUILD_DIR
                 cp -r package/* $BUILD_DIR/
@@ -151,7 +149,7 @@ orbs:
               name: Setup for testing
               command: |
                 pip install -r tests/requirements.txt
-                pip install git+https://github.com/pixelb/crudini        
+                pip install git+https://github.com/pixelb/crudini
                 mkdir test-results
           - run:
               name: Splunk up
