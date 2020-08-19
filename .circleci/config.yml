@@ -463,7 +463,6 @@ workflows:
           filters:
             branches:
               only: master
-              # ignore: /.*/
             tags:
               only: /^v\d*\.\d*\.\d*.*$/
       - publish-gh:
@@ -472,7 +471,6 @@ workflows:
           filters:
             branches:
               only: master
-              # ignore: /.*/
             tags:
               only: /^v\d*\.\d*\.\d*.*$/
       - publish-sbase:
@@ -481,6 +479,5 @@ workflows:
           filters:
             branches:
               only: master
-              # ignore: /.*/
             tags:
               only: /^v\d*\.\d*\.\d*.*$/
