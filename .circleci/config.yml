@@ -249,8 +249,8 @@ orbs:
               name: Merge
               command: |
                 git remote set-url origin https://<<parameters.gh_user>>:<<parameters.gh_token>>@github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git
-                git config --global user.email "addonreleasesrv@splunk.com"
-                git config --global user.name "Add on release service"
+                git config --global user.email "diogo.silva@devbusters.com"
+                git config --global user.name "diogofgm"
                 git pull origin master
                 git merge master -m "Merge from master"
                 git checkout master
