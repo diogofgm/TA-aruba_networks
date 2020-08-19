@@ -334,6 +334,7 @@ jobs:
             curl -u ${SPLUNKBASE_USERNAME}:${SPLUNKBASE_PASSWORD}  --request POST https://splunkbase.splunk.com/api/v1/app/${SPLUNKBASE_ID}/new_release/ -F "files[]=@${PACKAGE}" -F "filename=${PACKAGE_ID}.spl" -F "splunk_versions=${SPLUNKBASE_SPLUNK_VERSION}" -F "visibility=${SPLUNKBASE_VIS}"
 
 workflows:
+  version: 2
   build:
     jobs:
       - splunk-app-package/package:
