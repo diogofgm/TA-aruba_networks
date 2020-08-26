@@ -2,248 +2,218 @@
 Sourcetypes
 ===========
 
-[aruba:authmgr]
----------------
-
-[aruba:certmgr]
----------------
-Certificate Manager
-
-
-[aruba:cfgm]
-------------
-
-[aruba:dhcpdwrap]
------------------
-DHCP info
-
-[aruba:lldp]
-------------
-Link Layer Discovery Protocol
-https://community.arubanetworks.com/t5/Controller-Based-WLANs/LLDP-on-Aruba-Controller/ta-p/180578
-
-
-[aruba:nanny]
--------------
-
-
-
-
-
-[aruba:wms]
------------
-WLAN Management System
-
-
-
-
-802.1X
-------
-Description: Network Access Control authentication
-security, network, system, user, wireless
-
-aaa
----
+aruba:aaa
+---------
 Description: AAA logging
 security, system, user
 
-ads
----
+aruba:ads
+---------
 Description: Logging for Anomaly Detection
 system
 
-approc
-------
+aruba:approc
+------------
 Description: Logging for AP processes
 system
 
-authmgr amutil radius, main tacacs
-----------------------------------
+aruba:authmgr
+-------------
 Description: Logging for user authentication
 security
 security, network, system, user, wireless security, system, user
 
-certmgr
+aruba:certmgr
 -------
 Description: Logging for Certificate Manager
 security, system
 
-cfgm
+aruba:cfgm
 ----
 Description: Logging for Configuration Manager
 system
 
-crypto
+aruba:crypto
 ------
 Description: Logging for VPN (IKE/IPSEC)
 security, network, system, user
 
-cts
+aruba:cts
 ---
 Description: Logging for transport service
 system
 
-dbsync lib
+aruba:dbsync
 ----------
 Description: Logging for Database Synchronization
 system
 
-dhcpd
+aruba:dhcpd
 -----
 Description: Logging for DHCP packets
 network
 
-esi
+aruba:dhcpdwrap
+-----------------
+Description: Logging for DHCP
+network
+
+aruba:esi
 ---
 Description: Logging for External Services Interface
 system, network, user
 
-fpapps
+aruba:fpapps
 ------
 Description: Logging for Layer 2,3 control
 network, system
 
-httpd
+aruba:httpd
 -----
 Description: Logging for Apache
 system, security
 
-l2tp
+aruba:l2tp
 ----
 Description: Logging for L2TP
 security
 
-ldap
+aruba:ldap
 ----
 Description: Directory access protocols
 security, network, system, user, wireless
 
-licensemgr
+aruba:licensemgr
 ----------
 Description: Logging for license manager
 system
 
-localdb
+aruba:lldp
+------------
+Link Layer Discovery Protocol
+https://community.arubanetworks.com/t5/Controller-Based-WLANs/LLDP-on-Aruba-Controller/ta-p/180578
+
+aruba:localdb
 -------
 Description: Logging for local database
 security, network, system, user, wireless
 
-meshd
+aruba:meshd
 -----
 Description: Logging for Mesh daemon
 security, system, wireless
 
-mobileip
+aruba:mobileip
 --------
 Description: Logging for Mobile IP
 security, network, system, user
 
-nanny
+aruba:nanny
 -----
 Description: Logging for process management
 system
 
-ntp
+aruba:ntp
 ---
 Description: Network Time Protocol
 network, system
 
-packetfilter
+aruba:packetfilter
 ------------
 Description: Logging for packet filtering of messaging and control frames
 system
 
-phonehome
+aruba:phonehome
 ---------
 Description: Logging for PhoneHome
 network, system
 
-pim
+aruba:pim
 ---
 Description: Logging for Protocol Independent Multicast
 system, network, user
 
-ppp
+aruba:ppp
 ---
 Description: Logging for PPP
 security, network, system, user
 
-pppoed
+aruba:pppoed
 ------
 Description: Logging for PPPoE
 security, network, system, user
 
-pptp
+aruba:pptp
 ----
 Description: Logging for PPTP
 security, network, system
 
-processes
+aruba:processes
 ---------
 Description: Logging for run-time processes
 system
 
-profmgr
+aruba:profmgr
 -------
 Description: Logging for Profile Manager
 system
 
-publisher
+aruba:publisher
 ---------
 Description: Logging for publish subscribe service
 system
 
-rfd
+aruba:rfd
 ---
 Description: Logging for RF Management daemon (AP)
 system
 
-rfm
+aruba:rfm
 ---
 Description: Logging for RF Troubleshooting Manager
 system
 
-sapd
+aruba:sapd
 ----
 Description: Logging for Access Point Manager (AP)
 system
 
-sapm
+aruba:sapm
 ----
 Description: Logging for Access Point Manager (Controller)
 system, wireless
 
-snmp
+aruba:snmp
 ----
 Description: SNMP logging
 security, system
 
-stm
+aruba:stm
 ---
 Description: Logging for Station Management
 security, network, system, user, wireless
 
-syslogdwrap
+aruba:syslogdwrap
 -----------
 Description: Logging for System Logging daemon
 system
 
-traffic
+aruba:traffic
 -------
 Description: Logging for traffic
 system
 
-voip
+aruba:voip
 ----
 Description: Voice over IP issues
 security, network, system, user, wireless
 
-vrrpd
+aruba:vrrpd
 -----
 Description: Logging for VRRP
 system
 
-wms
+aruba:wms
 ---
 Description: Logging for Wireless Management (Master switch only)
 security, network, system, wireless
