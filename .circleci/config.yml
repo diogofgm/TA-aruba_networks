@@ -360,24 +360,24 @@ workflows:
               only: /.*/
           requires:
             - package
-      - splunk-app-test/test_aio:
-          name: test-splunk-8-0
-          splunk_version: "8.0"
-          filters:
-            branches:
-              only: /.*/
-      - splunk-app-test/test_aio:
-          name: test-splunk-7-3
-          splunk_version: "7.3"
-          filters:
-            branches:
-              only: /.*/
-      - splunk-app-test/test_aio:
-          name: test-splunk-7-2
-          splunk_version: "7.2"
-          filters:
-            branches:
-              only: /.*/
+      # - splunk-app-test/test_aio:
+      #     name: test-splunk-8-0
+      #     splunk_version: "8.0"
+      #     filters:
+      #       branches:
+      #         only: /.*/
+      # - splunk-app-test/test_aio:
+      #     name: test-splunk-7-3
+      #     splunk_version: "7.3"
+      #     filters:
+      #       branches:
+      #         only: /.*/
+      # - splunk-app-test/test_aio:
+      #     name: test-splunk-7-2
+      #     splunk_version: "7.2"
+      #     filters:
+      #       branches:
+      #         only: /.*/
       - splunk-release/tag:
           name: tag-alpha
           tag_level: alpha
