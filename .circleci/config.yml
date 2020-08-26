@@ -17,7 +17,7 @@ orbs:
                 virtualenv ~/.venv
                 source ~/.venv/bin/activate
                 pip install semantic_version
-                pip install https://download.splunk.com/misc/packaging-toolkit/splunk-packaging-toolkit-1.0.0.tar.gz
+                pip install https://download.splunk.com/misc/packaging-toolkit/splunk-packaging-toolkit-1.0.1.tar.gz
                 pip install git+https://github.com/pixelb/crudini
           - run:
               name: version
@@ -331,7 +331,7 @@ jobs:
             PACKAGE=$(ls /tmp/workspace/build/package/splunkbase/*)
             PACKAGE_ID=$(crudini --get package/default/app.conf id name)
             [ "${ISPRE}" == "-prerelease" ] && SPLUNKBASE_VIS="false" || SPLUNKBASE_VIS="true"                
-            curl -u ${SPLUNKBASE_USERNAME}:${SPLUNKBASE_PASSWORD}  --request POST https://splunkbase.splunk.com/api/v1/app/${SPLUNKBASE_ID}/new_release/ -F "files[]=@${PACKAGE}" -F "filename=${PACKAGE_ID}.spl" -F "splunk_versions=${SPLUNKBASE_SPLUNK_VERSION}" -F "visibility=${SPLUNKBASE_VIS}"
+            curl -u ${SPLUNKBASE_USERNAME}:${SPLUNKBASE_PASSWORD}  --request POST https://splunkbase.splunk.com/api/v1/app/${SPLUNKBASE_ID}/new_release/ -F "files[]=@${PACKAGE}" -F "filename=${PACKAGE_ID}.spl" -F "cim_versions=${SPLUNKBASE_SPLUNK_CIM_VERSION}" -F "splunk_versions=${SPLUNKBASE_SPLUNK_VERSION}" -F "visibility=${SPLUNKBASE_VIS}"
 
 workflows:
   version: 2
