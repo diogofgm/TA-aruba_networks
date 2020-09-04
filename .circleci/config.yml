@@ -473,6 +473,7 @@ workflows:
             branches:
               only:
                 - master
+                - develop
             tags:
               only: /^v\d*\.\d*\.\d*$/
       - publish-gh:
@@ -482,6 +483,7 @@ workflows:
             branches:
               only:
                 - master
+                - develop
             tags:
               only: /^v\d*\.\d*\.\d*$/
       - publish-sbase:
