@@ -465,6 +465,7 @@ workflows:
             branches:
               only:
                 - master
+                - develop
       - splunk-app-package/package:
           name: package
           requires:
