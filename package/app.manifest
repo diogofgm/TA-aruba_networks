@@ -55,7 +55,7 @@
   "platformRequirements": 
     {
        "splunk": {
-           "Enterprise": ">=7.0.0"
+           "Enterprise": ">=7.2.0"
         }
 	}, 
   "supportedDeployments": [
