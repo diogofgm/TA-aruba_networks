@@ -1,4 +1,4 @@
-name: CI
+name: AppInspect
 on:
   push:
     branches:
@@ -82,8 +82,3 @@ jobs:
         with:
           app_path: dist
           included_tags: ${{ matrix.tags }}
-
-  # splunkbase-release:
-  #   name: Release to Splunkbase
-  #   needs: appinspect-cli
-  #   runs-on: ubuntu-latest
