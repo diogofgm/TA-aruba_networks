@@ -2,6 +2,13 @@
 Release Notes
 =============
 
+V1.0.0 - February 2022
+----------------------
+- Added CEF support
+- 
+
+
+
 v0.1.3 - August 2020
 --------------------
 - Added missing extractions to aruba:wms
