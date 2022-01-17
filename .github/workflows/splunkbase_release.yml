@@ -1,0 +1,72 @@
+name: Publish to Splunkbase
+on: 
+  workflow_dispatch:
+    branches:
+      - "main"
+#    tags:
+#      - "v[0-9]+.[0-9]+.[0-9]+"     
+
+
+jobs:
+
+  splunkbase-release:
+    name: Splunkbase release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          # semantic-release won't trigger a tagged build if this is not set false
+          persist-credentials: false
+
+      # Our add-on contains Python code, so we need to install Python in the container
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: Load ENV variables
+        id: vars
+        run: |
+          source .splunkbase
+          echo ::set-output name=SPLUNKBASE_ID::"$SPLUNKBASE_ID"
+          echo ::set-output name=SPLUNKBASE_SPLUNK_VERSION::"$SPLUNKBASE_SPLUNK_VERSION"
+          echo ::set-output name=SPLUNKBASE_SPLUNK_CIM_VERSION::"$SPLUNKBASE_SPLUNK_CIM_VERSION"
+
+      - name: Package Splunk App with CLI
+        run: |
+          pwd
+          ls -la
+          cd ${GITHUB_WORKSPACE}
+          VERSION=$(awk '/version/ {print $3; exit}' app.conf)
+          mv package TA-aruba_networks
+          mkdir dist
+          tar -zcvf dist/TA-aruba_networks_$VERSION.tgz TA-aruba_networks
+          cd dist
+          ls -la
+          pwd
+
+      - name: Authenticate to Splunkbase
+        id: login
+        shell: bash
+        run: |
+          curl --location --request POST 'https://splunkbase.splunk.com/api/account:login/' --data-urlencode 'username='"${{ secrets.SPLUNKBASE_USER }}"'' --data-urlencode 'password='"${{ secrets.SPLUNKBASE_PASSWORD }}"'' > login.xml
+          ls
+          pwd
+          AUTH=$(awk '/id/{printf $1}' login.xml | cut -d'>' -f2 | cut -d'<' -f1)
+          echo ::set-output name=SPLUNKBASE_SESSION_ID::"$AUTH"
+          
+      - name: Publish to Splunkbase
+        shell: bash
+        run: |
+          cd /home/runner/work/TA-aruba_networks/TA-aruba_networks/dist
+          pwd
+          ls
+          echo ${{ steps.login.outputs.SPLUNKBASE_SESSION_ID }}
+          echo ${{ steps.vars.outputs.SPLUNKBASE_ID }}
+          echo ${{ steps.vars.outputs.SPLUNKBASE_SPLUNK_VERSION }}
+          echo ${{ steps.vars.outputs.SPLUNKBASE_SPLUNK_CIM_VERSION }}
+          curl -u ${{ secrets.SPLUNKBASE_USER }}:${{ secrets.SPLUNKBASE_PASSWORD }} --request POST https://splunkbase.splunk.com/api/v1/app/${{ steps.vars.outputs.SPLUNKBASE_ID }}/new_release/ -F "files[]=@/home/runner/work/TA-aruba_networks/TA-aruba_networks/dist/TA-aruba_networks.tgz" -F "filename=TA-aruba_networks.tgz" -F "cim_versions=${{ steps.vars.outputs.SPLUNKBASE_SPLUNK_CIM_VERSION }}" -F "splunk_versions=${{ steps.vars.outputs.SPLUNKBASE_SPLUNK_VERSION }}" -F "visibility=true"
+
+        
+      
