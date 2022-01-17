@@ -24,12 +24,12 @@ security
 security, network, system, user, wireless security, system, user
 
 aruba:certmgr
--------
+-------------
 Description: Logging for Certificate Manager
 security, system
 
 aruba:cfgm
-----
+----------
 Description: Logging for Configuration Manager
 system
 
@@ -59,17 +59,17 @@ Description: Logging for DHCP
 network
 
 aruba:esi
----
+---------
 Description: Logging for External Services Interface
 system, network, user
 
 aruba:fpapps
-------
+------------
 Description: Logging for Layer 2,3 control
 network, system
 
 aruba:httpd
------
+-----------
 Description: Logging for Apache
 system, security
 
@@ -124,37 +124,37 @@ Description: Logging for packet filtering of messaging and control frames
 system
 
 aruba:phonehome
----------
+---------------
 Description: Logging for PhoneHome
 network, system
 
 aruba:pim
----
+---------
 Description: Logging for Protocol Independent Multicast
 system, network, user
 
 aruba:ppp
----
+---------
 Description: Logging for PPP
 security, network, system, user
 
 aruba:pppoed
-------
+------------
 Description: Logging for PPPoE
 security, network, system, user
 
 aruba:pptp
-----
+----------
 Description: Logging for PPTP
 security, network, system
 
 aruba:processes
----------
+---------------
 Description: Logging for run-time processes
 system
 
 aruba:profmgr
--------
+-------------
 Description: Logging for Profile Manager
 system
 
