@@ -1,4 +1,5 @@
 # Splunk Files and Folders
+sample_data/
 local/
 local.meta
 addon_builder.conf
