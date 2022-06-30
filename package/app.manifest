@@ -52,12 +52,7 @@
   "tasks": null,
   "inputGroups": null,
   "incompatibleApps": null,
-  "platformRequirements":
-    {
-       "splunk": {
-           "Enterprise": ">=7.2.0"
-        }
-	},
+  "platformRequirements": null,
   "supportedDeployments": [
     "*"
   ],
