@@ -7,6 +7,5 @@ addon_builder.conf
 # MacOS Files
 .DS_Store
 
-# Other 
+# Other
 .vscode
-

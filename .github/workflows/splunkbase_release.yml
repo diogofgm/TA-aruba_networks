@@ -1,10 +1,10 @@
 name: Publish to Splunkbase
-on: 
+on:
   workflow_dispatch:
     branches:
       - "main"
 #    tags:
-#      - "v[0-9]+.[0-9]+.[0-9]+"     
+#      - "v[0-9]+.[0-9]+.[0-9]+"
 
 
 jobs:
@@ -55,7 +55,7 @@ jobs:
           pwd
           AUTH=$(awk '/id/{printf $1}' login.xml | cut -d'>' -f2 | cut -d'<' -f1)
           echo ::set-output name=SPLUNKBASE_SESSION_ID::"$AUTH"
-          
+
       - name: Publish to Splunkbase
         shell: bash
         run: |
@@ -67,6 +67,3 @@ jobs:
           echo ${{ steps.vars.outputs.SPLUNKBASE_SPLUNK_VERSION }}
           echo ${{ steps.vars.outputs.SPLUNKBASE_SPLUNK_CIM_VERSION }}
           curl -u ${{ secrets.SPLUNKBASE_USER }}:${{ secrets.SPLUNKBASE_PASSWORD }} --request POST https://splunkbase.splunk.com/api/v1/app/${{ steps.vars.outputs.SPLUNKBASE_ID }}/new_release/ -F "files[]=@/home/runner/work/TA-aruba_networks/TA-aruba_networks/dist/TA-aruba_networks.tgz" -F "filename=TA-aruba_networks.tgz" -F "cim_versions=${{ steps.vars.outputs.SPLUNKBASE_SPLUNK_CIM_VERSION }}" -F "splunk_versions=${{ steps.vars.outputs.SPLUNKBASE_SPLUNK_VERSION }}" -F "visibility=true"
-
-        
-      
