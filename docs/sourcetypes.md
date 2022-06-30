@@ -1,6 +1,9 @@
-===========
-Sourcetypes
-===========
+---
+layout: default
+title: Sourcetypes
+nav_order: 6
+---
+# Sourcetypes
 
 aruba:aaa
 ---------
