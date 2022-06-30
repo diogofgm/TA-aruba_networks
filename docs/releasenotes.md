@@ -29,7 +29,7 @@ nav_order: 2
 ## v0.1.1 - October 2019
 
 - Added missing extractions for CIM compliance
-- Updated aruba_actions.csv 
+- Updated aruba_actions.csv
 
 
 ## v0.1.0 - September 2019
