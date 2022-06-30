@@ -1,6 +1,10 @@
-============
-Installation
-============
+---
+layout: default
+title: Installation
+nav_order: 4
+---
+# Installation
+
 
 Install the Aruba Networks Add-on for Splunk
 ==================================
