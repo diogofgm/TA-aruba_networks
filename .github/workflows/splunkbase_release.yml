@@ -3,10 +3,7 @@ on: workflow_dispatch
 
 jobs:
    publish:
-      runs-on: ubuntu-latest
-      name: Publish to Splunkbase
-      steps:
-         - uses: diogofgm/splunkbase-release-action@v0.0.3
-           with:
-               SPLUNKBASE_USER: ${{ secrets.SPLUNKBASE_USER }}
-               SPLUNKBASE_PASSWORD: ${{ secrets.SPLUNKBASE_PASSWORD }}
+      uses: diogofgm/splunkbase-release-action/.github/workflows/splunkbase-release-action.yml@v0.0.3
+      with:
+         SPLUNKBASE_USER: ${{ secrets.SPLUNKBASE_USER }}
+         SPLUNKBASE_PASSWORD: ${{ secrets.SPLUNKBASE_PASSWORD }}
