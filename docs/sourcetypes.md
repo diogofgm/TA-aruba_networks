@@ -26,9 +26,7 @@ aruba:httpd      | Logging for Apache                      | system, security
 aruba:l2tp       | Logging for L2TP                        | security
 aruba:ldap       | Directory access protocols              | security, network, system, user, wireless
 aruba:licensemgr | Logging for license manager             | system
-
 aruba:lldp | Link Layer Discovery Protocol | https://community.arubanetworks.com/t5/Controller-Based-WLANs/LLDP-on-Aruba-Controller/ta-p/180578
-
 aruba:localdb | Logging for local database | security, network, system, user, wireless
 aruba:meshd | Logging for Mesh daemon | security, system, wireless
 aruba:mobileip | Logging for Mobile IP | security, network, system, user
