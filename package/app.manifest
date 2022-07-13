@@ -25,13 +25,13 @@
       "developmentStatus": "Production/Stable"
     },
     "commonInformationModels": {
-	    "Authentication":">=4.0.0,<=4.15.0",
-	    "Change Analysis":">=4.0.0,<=4.15.0",
-	    "Change":">=4.12.0,<=4.15.0",
-      "Databases":">=4.0.0,<=4.15.0",
-      "Network Traffic":">=4.0.0,<=4.15.0",
-      "Intrusion Detection":">=4.0.0,<=4.15.0"
-		},
+      "Authentication": ">=4.0.0,<=4.15.0",
+      "Change Analysis": ">=4.0.0,<=4.15.0",
+      "Change": ">=4.12.0,<=4.15.0",
+      "Databases": ">=4.0.0,<=4.15.0",
+      "Network Traffic": ">=4.0.0,<=4.15.0",
+      "Intrusion Detection": ">=4.0.0,<=4.15.0"
+    },
     "license": {
       "name": "Apache License, Version 2.0",
       "text": "LICENSE",
