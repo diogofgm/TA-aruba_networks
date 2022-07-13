@@ -5,3 +5,5 @@
 "WARN","warn"
 "ERRS","error"
 "CRIT","crit"
+"ALERT","crit"
+"EMERG","crit"
