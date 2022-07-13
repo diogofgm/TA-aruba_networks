@@ -6,7 +6,7 @@ nav_order: 6
 # Sourcetypes
 
 Sourcetype | Description | Categories used by component
------------|-------------|-----------------------------
+:---------:|:-----------:|:---------------------------:
 aruba:aaa  | AAA logging | security, system, user
 
 aruba:ads
