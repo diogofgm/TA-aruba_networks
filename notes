@@ -1,0 +1,16 @@
+index=main sourcetype=aruba* log_source=stm
+| rex "(?:Deauth|Disassoc) (?:to|from) sta: (?<sta_mac>(?:(?:[a-f\d]){2}:){5}(?:[a-f\d]){2})"
+| rex "(?:Auth|Assoc) (?:success|request)(?: @ [\d:\.]+)?: (?<sta_mac>(?:(?:[a-f\d]){2}:){5}(?:[a-f\d]){2})"
+| rex "STA (?<ap_mac>(?:(?:[a-f\d]){2}:){5}(?:[a-f\d]){2}) at"
+| rex "BSSID (?<ap_mac>(?:(?:[a-f\d]){2}:){5}(?:[a-f\d]){2})"
+| rex "Reason (?<reason>.*)"
+| table ap_* sta* reason _raw
+
+
+index=main sourcetype=aruba* sourcetype="aruba:authmgr" 
+| rex "(?i)BSSID=(?<ap_mac>(?:(?:[a-f\d]){2}:){5}(?:[a-f\d]){2})" 
+| rex "reason=(?<reason>.*)" 
+| rex "(?i)role=(?<role>[^\,]+)" 
+| rex "(?i)MAC=(?<sta_mac>(?:(?:[a-f\d]){2}:){5}(?:[a-f\d]){2})" 
+| rex "IP=(?<sta_ip>(?:\d{1,3}\.){3}\d{1,3})" 
+| table ap_* sta_* vlan user role reason message
