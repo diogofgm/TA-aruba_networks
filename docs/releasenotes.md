@@ -5,7 +5,11 @@ nav_order: 2
 ---
 # Release Notes
 
-## v1.0.0 - February 2022
+## v1.1.0 - August 2022
+
+- Fixed field name in the vendor_log_level lookup configuration
+
+## v1.0.0 - July 2022
 
 - Added CEF support
 
