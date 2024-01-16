@@ -5,6 +5,11 @@ nav_order: 2
 ---
 # Release Notes
 
+## v1.1.1 - January 2024
+
+- Improvemnts in index-time sourcetype renaming
+- Added extraction to aruba:ucm
+
 ## v1.1.0 - August 2022
 
 - Fixed field name in the vendor_log_level lookup configuration
