@@ -8,7 +8,8 @@ nav_order: 5
 - Configure a new index (e.g. wifi) for the new logs
 
 ### Receiving syslogs on Splunk
-NOTE: Its recommended to use a separate and dedicated syslog solution (e.g. rsyslog, syslog-ng, etc).
+{: .important }
+> Its recommended to use a separate and dedicated syslog solution (e.g. rsyslog, syslog-ng, etc).
 - Configure new TCP port (e.g. 514) pointing to the new index using the "aruba:syslog" sourcetype
 
 ### Monitoring log files
